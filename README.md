@@ -12,7 +12,7 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 // Parámetros editables
 
 // REFERENCIA
-"wget -O - https://raw.githubusercontent.com/PROYECTOEBG/ELITE-BOT/master/elite.sh | bash"
+"wget -O - https://raw.githubusercontent.com/PROYECTOEBG/shizoBot/master/elite.sh | bash"
 
 // PARÁMETROS QUE PUEDE SER MODIFICADOS --> "[...]"
 "wget -O - https://raw.githubusercontent.com/[usuario]/[repositorio]/[rama]/elite.sh | bash"
