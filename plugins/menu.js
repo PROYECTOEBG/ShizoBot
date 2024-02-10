@@ -14,17 +14,11 @@ let readMore = more.repeat(850)
 let taguser = conn.getName(m.sender)
 let user = global.db.data.users[m.sender]
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let menu = `
-¡Hola! 👋🏻 @${m.sender.split("@")[0]}
- \`\`\`${week}, ${date}\`\`\`
- 
-⏤͟͟͞𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓
-┣┅⟣✦ 𝗛𝗼𝗹𝗮👋, 𝗦𝗼𝘆 𝗟𝗼𝗯𝗼-𝗕𝗼𝘁-𝗠𝗗
-┣┅⟣✦ 𝗘𝗻 𝗴𝗿𝘂𝗽𝗼𝘀: 𝙾𝚆𝙽𝙴𝚁  
-┣┅⟣✦ 𝗢𝘄𝗻𝗲𝗿: 𝙹𝙴𝙵𝙵𝙾
-┣┅⟣✦ 𝗙𝗲𝗰𝗵𝗮: ${date}
-┣┅⟣✦ 𝗟𝗶𝗻𝗱𝗼 𝗱𝗶𝗮 𝗽𝗮𝗿𝗮 𝘁𝗶
-┗━━━━━━━━━━━━━━━━━━┛
+let menu = `┏━━━━━━━━━━━━━━━━┓
+┃ ⏤͟͟͞𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 
+┃   ⭓¡𝘏𝘰𝘭𝘢! @${m.sender.split("@")[0]}
+┃   ⭓𝘧𝘦𝘤𝘩𝘢 : ${week}, ${date} 
+┗━━━━━━━━━━━━━━
  
 
  `.trim()
