@@ -1,10 +1,25 @@
-let handler = async (m, { conn, participants, groupMetadata }) => {
-    const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './media/Menu.jpg'
-    const { isBanned, Swagat, detect, sSwagat, sBye, sPromote, sDemote, antiLink, delete: del } = global.db.data.chats[m.chat]
-    const groupAdmins = participants.filter(p => p.admin)
-    const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
-    const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-    const lugarFecha = moment().tz('America/Lima')
+import fs, { promises } from 'fs'
+import fetch from 'node-fetch'
+let handler = async (m, { conn, usedPrefix, command }) => {
+try {
+let d = new Date(new Date + 3600000)
+let locale = 'es'
+let week = d.toLocaleDateString(locale, { weekday: 'long' })
+let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+let time = d.toLocaleTimeString(locale, {
+hour: 'numeric',
+minute: 'numeric',
+second: 'numeric'
+})
+let _uptime = process.uptime() * 1000
+let uptime = clockString(_uptime)
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+let more = String.fromCharCode(8206)
+let readMore = more.repeat(850)   
+let taguser = conn.getName(m.sender)
+let user = global.db.data.users[m.sender]
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+const lugarFecha = moment().tz('America/Lima')
 const formatoFecha = {
 weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
 months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
