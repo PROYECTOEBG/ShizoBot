@@ -1,5 +1,5 @@
 let handler = async (m, { conn, participants, groupMetadata }) => {
-  const date = d.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'});
+  
     const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './media/Menu.jpg'
     const { isBanned, Swagat, detect, sSwagat, sBye, sPromote, sDemote, antiLink, delete: del } = global.db.data.chats[m.chat]
     const groupAdmins = participants.filter(p => p.admin)
@@ -10,7 +10,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 ┣┅⟣✦ 𝗘𝗻 𝗴𝗿𝘂𝗽𝗼𝘀:  *@${m.sender.split("@")[0]}*
 
 ┣┅⟣✦ 𝗢𝘄𝗻𝗲𝗿: 𝙹𝙴𝙵𝙵𝙾
-┣┅⟣✦ 𝗙𝗲𝗰𝗵𝗮: ${date}
+┣┅⟣✦ 𝗙𝗲𝗰𝗵𝗮: 
 ┣┅⟣✦ 𝗟𝗶𝗻𝗱𝗼 𝗱𝗶𝗮 𝗽𝗮𝗿𝗮 𝘁𝗶
 ┗━━━━━━━━━━━━━━━━━━┛
 
