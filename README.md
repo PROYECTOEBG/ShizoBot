@@ -5,7 +5,7 @@
 termux-setup-storage
 ```
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/PROYECTOEBG/ELITE-BOT/master/elite.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/PROYECTOEBG/shizoBot/master/elite.sh | bash
 ```
 ```js
 // PERSONALIZAR INSTALACIÓN AUTOMÁTICA (En caso de una Bifurcación)
@@ -21,10 +21,10 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 ```js
 //LÍNEAS A MODIFICAR
 205 --> "git clone https://github.com/[user]/[repositorio].git"
-//Ejemplo: git clone https://github.com/PROYECTOEBG/ELITE-BOT.git
+//Ejemplo: git clone https://github.com/PROYECTOEBG/shizoBot.git
 
 209 --> "cd [repositorio]"
-//Ejemplo: cd ELITE-BOT
+//Ejemplo: cd shizoBot
 
 //Una vez hecho estos cambios ejecute los nuevos comandos en Termux
 ```
@@ -33,7 +33,7 @@ apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - 
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd
-> cd ELITE-BOT
+> cd shizoBot
 > npm start
 ```
 
@@ -42,13 +42,13 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 - DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A ELITE-BOT-TERMUX $  
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd ELITE-BOT
+> cd shizobot
 > rm -rf GataBotSession
 > npm start
 ```
 ----
 ### 🌎 ELITE BOT TERMUX 24/7
-> Debe ya estar vinculado con el código QR, despues poner en la consola del termux (CONTROL + Z) enter y despues escribir (cd ELITE-BOT) ⬅️ REPOSITORIO, después enter y poner el siguiente comando ⬇️
+> Debe ya estar vinculado con el código QR, despues poner en la consola del termux (CONTROL + Z) enter y despues escribir (cd shizoBot) ⬅️ REPOSITORIO, después enter y poner el siguiente comando ⬇️
 ```bash
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ``` 
