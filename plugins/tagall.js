@@ -6,8 +6,8 @@ global.dfail('admin', m, conn)
 throw false
 }
 let pesan = args.join` `
-let oi = `📩 hola${pesan}`
-let teks = `*╭━* 𝘼𝘾𝙏𝙄𝙑𝘼𝙏𝙀 🔰\n\n${oi}\n`
+let oi = `📩 𝙈𝙀𝙉𝙎𝘼𝙅𝙀: ${pesan}`
+let teks = `*╭━* 𝘼𝘾𝙏𝙄𝙑𝘼𝙏𝙀 \n\n${oi}\n`
 teks += `🥷🏻 𝙈𝙄𝙀𝙈𝘽𝙍𝙊𝙎: *${participants.length}*\n\n`
 for (let mem of participants) {
    
