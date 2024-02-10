@@ -319,10 +319,11 @@ ${readMore}
 const img = ['https://telegra.ph/file/fc06a087371478901a050.png']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
-} catch (e) {
-await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
-console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
-console.log(e)}}
+  } catch (e) {
+    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
+    throw e
+  }
+}
 
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 //handler.register = true
