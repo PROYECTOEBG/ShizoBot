@@ -1,48 +1,73 @@
-<div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=F710B1&center=true&width=910&height=100&lines=Welcome+to+Shizo+Techie's+Project;Shizo+WhatsApp+Bot;Coded+By+Shizo Techie" alt="Typing SVG" /></a>
-</div>
-<p align="center"> 
-<img src="https://komarev.com/ghpvc/?username=shizothetechie&color=brightgreen" />
-<p/>
+### 🌟 (OPCIÓN 1) INSTALACIÓN AUTOMÁTICA 🫰
+[![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/ZA7ZKB8Mo9k?si=u6puIzNEQGvJTBZG)
+> **Note** Comandos para instalar de forma automática en Termux  
+```bash
+termux-setup-storage
+```
+```bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget mpv && wget -O - https://raw.githubusercontent.com/PROYECTOEBG/ELITE-BOT/master/elite.sh | bash
+```
+```js
+// PERSONALIZAR INSTALACIÓN AUTOMÁTICA (En caso de una Bifurcación)
+// Parámetros editables
 
-**Documentation** 🖇️
-<details>
-<summary> ShizoApi (Api) 🧞‍♀️ </summary>
-  <b> Click </b> <a href="https://shizoapi.onrender.com">Api Docs</a> for Documentation 
-  </details>
-  <br>
-  <details>
-  <summary> Installation Guides </summary>
-<br>
- **_TERMUX:_** 
- <br>
-<li> ---1. pkg update
- <li> ---2. pkg install git
-<li> ---3. pkg install nodejs
- <li> ---4. git clone https://github.com/shizothetechie/shizobot
- <br>
-- [Heroku Guide](https://shizoapi.onrender.com)
-</details>
+// REFERENCIA
+"wget -O - https://raw.githubusercontent.com/PROYECTOEBG/ELITE-BOT/master/elite.sh | bash"
 
-<br>
+// PARÁMETROS QUE PUEDE SER MODIFICADOS --> "[...]"
+"wget -O - https://raw.githubusercontent.com/[usuario]/[repositorio]/[rama]/elite.sh | bash"
+```
+#### MODIFICAR ARCHIVO [`elite.sh`](https://github.com/GataNina-Li/GataBot-MD/blob/master/gata.sh)
+```js
+//LÍNEAS A MODIFICAR
+205 --> "git clone https://github.com/[user]/[repositorio].git"
+//Ejemplo: git clone https://github.com/PROYECTOEBG/ELITE-BOT.git
 
-<details>
-<summary> External Plugins </summary>
+209 --> "cd [repositorio]"
+//Ejemplo: cd ELITE-BOT
 
-##ShizoBot Support External plugin.
-<br>
-Shizo Bot can be upgrade by installing external plugin that made by third party developers. 
-<br>
-<br>
- **_NOTE:_** Installing External Plugin may cause error if plugin have any bug.
- <br><br>
-**For Developer**
-- [ External Plugin Build Docs ](https://github.com/shizothetechie/shizoX)
- </details>
+//Una vez hecho estos cambios ejecute los nuevos comandos en Termux
+```
 
+### `—◉ ☑️ ACTIVAR EN CASO DE APAGARSE EN TERMUX ☑️`
+```bash
+ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> cd
+> cd ELITE-BOT
+> npm start
+```
 
-##Happy Diwali Guys
-This is an wonderful whatsapp bot base. this is based on plugins system. with sample plugins
+### `—◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑` <img src="https://github.com/DIEGO-OFC/Shadow-Bot-MD/blob/main/galeria/qrcode_30531084_.png" height="30px">
 
+- DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A ELITE-BOT-TERMUX $  
+```bash
+ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> cd ELITE-BOT
+> rm -rf GataBotSession
+> npm start
+```
+----
+### 🌎 ELITE BOT TERMUX 24/7
+> Debe ya estar vinculado con el código QR, despues poner en la consola del termux (CONTROL + Z) enter y despues escribir (cd ELITE-BOT) ⬅️ REPOSITORIO, después enter y poner el siguiente comando ⬇️
+```bash
+termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
+``` 
+#### ⬇️ Opciones Disponibles
+> **Warning** Esto eliminará todo el historial que hayas establecido con PM2:
+```bash 
+pm2 delete index
+``` 
+> Si tienes cerrado Termux y quiere ver de nuevo la ejecución use:
+```bash 
+pm2 logs 
+``` 
+> Si desea detener la ejecución de Termux use:
+```bash 
+pm2 stop index
+``` 
+> Si desea iniciar de nuevo la ejecución de Termux use:
+```bash 
+pm2 start index
+``` 
+----
 
-##Full Documents will add soon
