@@ -1,5 +1,5 @@
 let handler = async (m, { conn, participants, groupMetadata }) => {
-  
+  const date = d.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'});
     const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './media/Menu.jpg'
     const { isBanned, Swagat, detect, sSwagat, sBye, sPromote, sDemote, antiLink, delete: del } = global.db.data.chats[m.chat]
     const groupAdmins = participants.filter(p => p.admin)
